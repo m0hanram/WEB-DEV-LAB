@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Principal = <input id="princi" type="text"></p>
+    <p>Rate = <input id="rate" type="text"></p>
+    <p>Duration = <input id="duration" type="text"></p>
+    <button onclick="simple_interest()">SIMPLE INTEREST</button>
+    <p id="s_ans"></p>
+    <br>
+    <button onclick="compound_interst()">COMPOUND INTEREST</button>
+    <p id="c_ans"></p>
+    <script>
+        function simple_interest()
+        {
+            var p,r,y;
+            p=document.getElementById("princi").value;
+            r=document.getElementById("rate").value;
+            y=document.getElementById("duration").value;
+            document.getElementById("s_ans").innerHTML=p*r*y/100;
+        }
+        function compound_interst()
+        {
+            var p,r,y;
+            p=document.getElementById("princi").value;
+            r=document.getElementById("rate").value;
+            y=document.getElementById("duration").value;
+            document.getElementById("c_ans").innerHTML=p*r*y/100;
+        }
+    </script>
+</body>
+</html>
