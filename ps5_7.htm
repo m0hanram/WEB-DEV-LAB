@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>ps5_7</title>
+</head>
+<body>
+    <p>ENTER THE NUMBERS:</p>
+    x=<input type="number" id="x">
+    y=<input type="number" id="y">
+    z=<input type="number" id="z">
+    <br><br>
+    <button onclick=sum()>SUM</button>
+    <br><br>
+    <button onclick=product()>PRODUCT</button>
+    <br><br>
+    <button onclick=avg()>AVERAGE</button>
+    <br><br>
+    <button onclick=smallest()>SMALLEST</button>
+    <br><br>
+    <button onclick=largest()>LARGEST</button>
+    <br><br>
+    <p>ANSWER IS =</p><br>
+    <p id="answer">ANSWER:</p>
+    <script>
+        function sum() {
+            var s, x, y,z;
+            x = Number(document.getElementById("x").value);
+            y = Number(document.getElementById("y").value);
+            z = Number(document.getElementById("z").value);
+            s = x + y+z;
+            alert("The sum is ="+s);
+        }
+        function product() {
+            var s, x, y,z;
+            x = Number(document.getElementById("x").value);
+            y = Number(document.getElementById("y").value);
+            z = Number(document.getElementById("z").value);
+            s = x * y*z;
+            alert("The product is ="+s);
+        }
+        function avg() {
+            var s, x, y,z;
+            x = Number(document.getElementById("x").value);
+            y = Number(document.getElementById("y").value);
+            z = Number(document.getElementById("z").value);
+            s = (x+y+z)/3;
+            alert("The average is ="+s);
+        }
+        function smallest() {
+            var s, x, y,z;
+            x = Number(document.getElementById("x").value);
+            y = Number(document.getElementById("y").value);
+            z = Number(document.getElementById("z").value);
+            if (x < y && x < z)
+                s = x;
+            else if (y < x && y < z)
+                s = y;
+            else if (z < x && z < y)
+                s = z;
+            alert("The smallest element is ="+s);
+        }
+        function largest() {
+            var s, x, y, z;
+            x = Number(document.getElementById("x").value);
+            y = Number(document.getElementById("y").value);
+            z = Number(document.getElementById("z").value);
+            if (x > y && x > z)
+                s = x;
+            else if (y > x && y > z)
+                s = y;
+            else if (z > x && z > y)
+                s = z;
+           alert("The largest element is ="+s);
+        }
+    </script>
+</body>
+</html>

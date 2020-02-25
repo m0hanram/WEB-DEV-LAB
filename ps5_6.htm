@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>ps5_6</title>
+</head>
+<body>
+    <p>ENTER THE NUMBERS:</p>
+    x=<input type="number" id="x">
+    y=<input type="number" id="y">
+    <br>
+    <button onclick=sum()>SUM</button>
+    <br>
+    <button onclick=product()>PRODUCT</button>
+    <br>
+    <button onclick=difference()>DIFFERENCE</button>
+    <br>
+    <button onclick=quotient()>QUOTIENT</button>
+    <br>
+    <p id="answer">ANSWER:</p>
+    <script>
+        function sum() {
+            var s, x, y;
+            x = Number(document.getElementById("x").value);
+            y = Number(document.getElementById("y").value);
+            s = x + y;
+            document.getElementById("answer").innerHTML = s;
+        }
+        function product() {
+            var s, x, y;
+            x = Number(document.getElementById("x").value);
+            y = Number(document.getElementById("y").value);
+            s = x * y;
+            document.getElementById("answer").innerHTML = s;
+        }
+        function difference() {
+            var s, x, y;
+            x = Number(document.getElementById("x").value);
+            y = Number(document.getElementById("y").value);
+            s = x - y;
+            document.getElementById("answer").innerHTML = s;
+        }
+        function quotient() {
+            var s, x, y;
+            x = Number(document.getElementById("x").value);
+            y = Number(document.getElementById("y").value);
+            s = x / y;
+            document.getElementById("answer").innerHTML = s;
+        }
+    </script>
+</body>
+</html>
