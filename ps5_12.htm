@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>ps5_12</title>
+</head>
+<body>
+    <p>The String to search is:</p>
+    <p>abcdefghijklmnopqrstuvwxyzabcdefghijklm</p>
+    <input type=text  id="ques"/>
+    <br />
+    <p>Enter substring to search for:</p><input type=text id="word">
+    <button onclick=func()>search</button>
+    <p>First occurance located at index</p>
+    <input type=number id="ans1"/>
+    <p>Last occurance located at index</p>
+    <input type=number id="ans2"/>
+    <script>
+        function func()
+        {
+        var f_value=10;
+        var l_value=10;
+        var q = new Array(40);
+        var a = new Array(3);
+        q = document.getElementById("ques").value;
+        a = document.getElementById("word").value;
+        for(var i=0;i<40;i++)
+        {
+            if(q[i]==a[0] && q[i+1]==a[1] && q[i+2]==a[2])
+            {
+                if(i<26)
+                    f_value=i;
+                else
+                    l_value=i;
+            }
+        }
+        document.getElementById("ans1").value=f_value;
+        document.getElementById("ans2").value=l_value;
+        } 
+       </script>
+</body>
+</html>

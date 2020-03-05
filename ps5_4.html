@@ -22,10 +22,11 @@
         function find_area()
         {
             var a,b,c,s;
-            a=document.getElementById("a").value;
-            b=document.getElementById("b").value;
-            c=document.getElementById("c").value;
-            s=(a+b+c)/2;
+            a=Number(document.getElementById("a").value);
+            b=Number(document.getElementById("b").value);
+            c=Number(document.getElementById("c").value);
+            s = (a + b + c) / 2;
+            document.getElementById("ans").innerHTML = s;
             document.getElementById("ans").innerHTML=Math.sqrt(s*(s-a)*(s-b)*(s-c));
         }
     </script>
