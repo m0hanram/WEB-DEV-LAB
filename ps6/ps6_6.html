@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ps6_6</title>
+</head>
+<body>
+    <script>
+        fun(prompt("Enter the string"));
+        function fun(str)
+        {
+            var split;
+            split = str.split(" ");
+            for (var i = 0; i < split.length; i++)
+            {
+                split[i]= split[i].charAt(0).toUpperCase() + split[i].substring(1);
+            }
+            str = split.join(" ");
+            alert("The modified string is :" + str);
+        }
+    </script>
+</body>
+</html>

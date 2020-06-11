@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>ps5_8</title>
+</head>
+<body>
+    <p>ENTER THE 5 ELEMENTS:</p><br>
+    NUMBER 1=<input type=number id="x1"><br><br>
+    NUMBER 2=<input type=number id="x2"><br><br>
+    NUMBER 3=<input type=number id="x3"><br><br>
+    NUMBER 4=<input type=number id="x4"><br><br>
+    NUMBER 5=<input type=number id="x5"><br><br>
+    <button onclick=display()>DISPLAY</button>
+    <br><br>
+    POSITIVE :<p id="ans1"></p><br>
+    NEGATIVE :<p id="ans2"></p><br>
+    ZEROS :<p id="ans3"></p><br>
+    <script>
+        function display() {
+            var a = new Array(5);
+            a[0] = Number(document.getElementById("x1").value);
+            a[1] = Number(document.getElementById("x2").value);
+            a[2] = Number(document.getElementById("x3").value);
+            a[3] = Number(document.getElementById("x4").value);
+            a[4] = Number(document.getElementById("x5").value);
+            var p=0, n=0, z=0,i;
+            for (i = 0; i < 5; i++) {
+                if (a[i] > 0)
+                    p++;
+                else if (a[i] < 0)
+                    n++;
+                else
+                    z++;
+            }
+            document.getElementById("ans1").innerHTML = p;
+            document.getElementById("ans2").innerHTML = n;
+            document.getElementById("ans3").innerHTML = z;
+        }
+    </script>
+</body>
+</html>

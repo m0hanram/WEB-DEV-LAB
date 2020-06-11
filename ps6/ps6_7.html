@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ps6_7</title>
+</head>
+<body>
+    <p>Enter the parking hours</p>
+    <input type="text" id="in">
+    <button onclick="callback()">press</button>
+    <p id="result"></p>
+    <script>
+        function calculateCharges(hours)
+        {
+            if (hours <= 3)
+                return 2;
+            else if(hours>24)
+                return 10;
+            else
+            {
+                var result = 2 + 0.5*(hours - 3);
+                if (result <= 10)
+                    return result;
+                else if(result > 10)
+                    return 10;
+            }
+
+        }
+
+        function callback() {
+            var hours = parseInt(document.getElementById("in").value);
+            var result = calculateCharges(hours);
+            document.getElementById("result").innerHTML = "The cost of parking is " + result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULATING AREA:</h1>
+    <p>
+        Enter the sides of the triangle:<br>
+        Side 1   :   <input id="a" type="text"><br>
+        Enter the sides of the triangle:<br>
+        Side 2   :   <input id="b" type="text"><br>
+        Enter the sides of the triangle:<br>
+        Side 3   :   <input id="c" type="text"><br>
+    </p>
+    <button onclick=find_area()>AREA</button>
+    <p id="ans"></p>
+    <script>
+        function find_area()
+        {
+            var a,b,c,s;
+            a=Number(document.getElementById("a").value);
+            b=Number(document.getElementById("b").value);
+            c=Number(document.getElementById("c").value);
+            s = (a + b + c) / 2;
+            document.getElementById("ans").innerHTML = s;
+            document.getElementById("ans").innerHTML=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+        }
+    </script>
+</body>
+</html>

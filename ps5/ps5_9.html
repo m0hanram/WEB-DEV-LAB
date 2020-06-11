@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ps5_9</title>
+    </head>
+    <body>
+        <p>ENTER THE INTEGERS:</p>
+        x=<input type="text" id="x1">
+        y=<input type="text" id="y1">
+        <button onclick="fun()">ANSWER</button>
+        <br><br>
+        <p id="ans">ANS</p>
+        <script>
+            function fun()
+            {
+                var x,y,z;
+                x=Number(document.getElementById("x1").value);
+                y=Number(document.getElementById("y1").value);
+                z=x%y;
+                if(z==0)
+                    document.getElementById("ans").innerHTML="Y IS A MULTIPLE OF X";
+                else    
+                document.getElementById("ans").innerHTML="Y IS NOT A MULTIPLE OF X";
+            }
+        </script>
+    </body>
+</html>
